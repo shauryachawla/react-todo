@@ -25,9 +25,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>oyoy</h2>
-        <AddTaskForm addTask={this.addTask} />
-        <ListOfTasks tasks={this.state.tasks} />
+        <section className="section">
+          <div className="container">
+            <div className="columns ">
+              <div className="column" />
+              <div className="column has-background-light">
+                <div className="heading has-text-centered">
+                  <h1 className="title">Todo App</h1>
+                </div>
+                <br />
+                <AddTaskForm addTask={this.addTask} />
+                <ListOfTasks tasks={this.state.tasks} />
+              </div>
+              <div className="column" />
+            </div>
+          </div>
+        </section>
       </div>
     );
   }

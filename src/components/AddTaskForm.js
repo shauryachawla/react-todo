@@ -13,14 +13,20 @@ class AddTaskForm extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="has-text-centered" onSubmit={this.handleSubmit}>
         <input
+          className="input has-text-centered is-info"
           name="new-task"
           type="text"
           ref={this.new_task}
           placeholder="new task"
         />
-        <button type="submit">Add new task</button>
+        <br />
+        <br />
+
+        <button className="button is-rounded has-text-centered" type="submit">
+          Add new task
+        </button>
       </form>
     );
   }

@@ -4,12 +4,12 @@ class ListOfTasks extends Component {
     const tasks = this.props.tasks;
 
     return (
-      <div className="list-of-tasks">
-        <ul>
+      <div className="list-of-tasks content">
+        <ol type="1">
           {Object.keys(tasks).map(key => (
             <li key={key}>{tasks[key].desc}</li>
           ))}
-        </ul>
+        </ol>
       </div>
     );
   }
