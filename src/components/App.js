@@ -18,7 +18,11 @@ class App extends Component {
     tasks[`task${Date.now()}`] = task;
     this.setState({ tasks: tasks });
   };
-
+  removeTask = taskId => {
+    var tasks = { ...this.state.tasks }
+    tasks[taskId] = null
+    this.setState({ tasks: tasks });
+  }
   state = {
     tasks: {}
   };
@@ -35,7 +39,7 @@ class App extends Component {
                 </div>
                 <br />
                 <AddTaskForm addTask={this.addTask} />
-                <ListOfTasks tasks={this.state.tasks} />
+                <ListOfTasks removeTask={this.removeTask} tasks={this.state.tasks} />
               </div>
               <div className="column" />
             </div>
